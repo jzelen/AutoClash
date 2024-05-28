@@ -1,5 +1,5 @@
 {
-    #订阅配置, 订阅信息只支持clash配置#
+    
     "VpnProviders": [
       {
       "name": "很便宜机场"
@@ -8,19 +8,19 @@
     {
       "name": "公益云机场",
       "url": "https://cloud.gyyun.top/api/v1/client/subscribe?token=cb064baa24ac7561ed9f526fea4fc248"
-       //排除的节点, 正则
+  
       "ExcludeFilter": "公告",
       "GenCountryGroups": true
     }
    ],
-    //自定义分组配置, 这里生成的分组会加上 `custom` 的 tag, 这里生成的分组信息会在地区分组之前.
+   
     "CustomGroups": [
         {
             "Name": "🚫 未匹配流量",
             "Type": "select",
             "Filters": [
                 "DIRECT",
-                //节点过滤, 多个filter按照顺序生成到 `proxies` 中, 格式: <proxy/group>::<tag(支持多个tag, 逗号分隔)>::<正则>
+               
                 "group::custom::选择代理"
             ]
         },
@@ -85,7 +85,7 @@
             "Type": "select",
             "Filters": [
                 "DIRECT",
-                //bilibili 番剧出差解禁
+               
                 "proxy::很便宜机场::香港|台湾" 
             ]
         },        
@@ -184,7 +184,7 @@
         "GEOIP,CN,DIRECT",
         "MATCH,未匹配流量",
     ],
-    //文件合并完成之后, 更新gist文件
+
     "GithubGist": {
         "Token":"token",
         "GistId":"gistid",
